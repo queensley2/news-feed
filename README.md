@@ -1,5 +1,48 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# NewsFeed App
+
+A modern, responsive news aggregation application built with Next.js, TypeScript, and Tailwind CSS that delivers real-time news from various sources.
+
+
+
+## 🚀 Features
+
+- **Real-time News**: Fetch latest news articles from NewsAPI
+- **Responsive Design**: Optimized for all devices (mobile, tablet, desktop)
+- **Category Filtering**: Browse news by categories (World, Politics, Business, Tech, etc.)
+- **Search Functionality**: Find specific news articles
+- **Article Details**: Dedicated pages for full article reading
+- **Clean UI**: Modern, user-friendly interface with smooth animations
+- **TypeScript**: Fully typed for better development experience
+- **Performance Optimized**: Fast loading and efficient rendering
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **API Integration**: NewsAPI
+- **State Management**: React Hooks
+- **Icons**: Lucide React
+- **Deployment**: Vercel (recommended)
+
+## 📋 Prerequisites
+
+Before running this project, ensure you have:
+
+- Node.js 18.17 or later installed
+- npm, yarn, or pnpm package manager
+- A NewsAPI account and API key
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repository-url>
+cd news-feed
+
 ## Getting Started
 
 First, run the development server:
