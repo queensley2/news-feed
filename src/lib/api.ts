@@ -1,7 +1,8 @@
 import { NewsArticle, Category } from "@/types";
 
 // Temporary hardcoded solution
-const API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY || "0e67c853139e41abb3a28619e6cffb5b";
+const API_KEY =
+  process.env.NEXT_PUBLIC_NEWS_API_KEY || "0e67c853139e41abb3a28619e6cffb5b";
 const BASE_URL = "https://newsapi.org/v2";
 
 export async function fetchNews(
@@ -24,7 +25,19 @@ export async function fetchNews(
       }
     }
 
-    const response = await fetch(url);
+    // Modern fetch configuration for better performance
+    const response = await fetch(url, {
+      // These options help with modern HTTP features
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        // "Content-Type": "application/json",
+      },
+      // Enable modern fetch features
+      keepalive: true,
+      // Next.js specific: ensure proper handling
+      next: { revalidate: 300 }, // Revalidate every 5 minutes
+    } as RequestInit & { next?: { revalidate: number } });
 
     if (!response.ok) {
       throw new Error(`API request failed with status ${response.status}`);

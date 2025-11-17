@@ -1,3 +1,5 @@
+"use client";
+
 import NewsCard from "./NewsCard";
 import { NewsArticle, Category } from "@/types";
 
